@@ -6,8 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <form method='POST' action='{{url_for('.new_package')}}'>
+    <form method='POST' action='{{url_for(".new_package")}}'>
         {{form.csrf_token}}
+        <div>
+            {{form.sender_name.label}}{{form.sender_name}}
+            {{form.recipient_name.label}}{{form.recipient_name}}
+            {{form.origin.label}}{{form.origin}}
+            {{form.destination.label}}{{form.destination}}
+            {{form.shipping.label}}{{form.shipping}}
+            {{form.submit}}
+        </div>
     </form>
 </body>
 </html>

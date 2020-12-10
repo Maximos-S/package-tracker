@@ -9,6 +9,10 @@ python-dotenv = "~=0.13"
 jinja2 = "~=2.11"
 flask-wtf = "~=0.14"
 wtforms = "*"
+psycopg2-binary = "*"
+alembic = "*"
+flask-migrate = "*"
+flask-sqlalchemy = "*"
 
 [dev-packages]
 
