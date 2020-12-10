@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table class="orders-table">
+      <thead>
+        <tr>
+          <th colspan="5" class="table-title">
+              <tr>Name</tr>
+              <tr>Recipient</tr>
+              <tr>Origin</tr>
+              <tr>Destination</tr>
+              <tr>Location</tr>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+    {% for package in packages %}
+        <tr>
+            <td>{{package.name}}</td>
+            <td>{{package.recipient}}</td>
+            <td>{{package.origin}}</td>
+            <td>{{package.destination}}</td>
+            <td>{{package.location}}</td>
+        </tr>
+    {% endfor %}
+</body>
+</html>

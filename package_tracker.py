@@ -12,8 +12,9 @@ Migrate(app, db)
 
 
 @app.route("/")
-def root():
-    return "<h1>Package Tracker</h1>"
+def root_endpoint():
+    packages = Package.query.all()
+    return render_template("package_status.html", packages=packages)
 
 
 @app.route("/new_package", methods=['GET', "POST"])
